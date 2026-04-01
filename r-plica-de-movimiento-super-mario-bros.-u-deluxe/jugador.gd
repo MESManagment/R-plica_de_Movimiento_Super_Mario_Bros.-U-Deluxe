@@ -13,6 +13,7 @@ var max_jumps = 2
 var was_jump_pressed = false
 
 func _ready():
+	# Espera 5 segundos y luego borra el cartel de instrucciones
 	await get_tree().create_timer(5.0).timeout
 	$CanvasLayer.queue_free()
 
