@@ -12,6 +12,10 @@ var jump_count = 0
 var max_jumps = 2
 var was_jump_pressed = false
 
+func _ready():
+	await get_tree().create_timer(5.0).timeout
+	$CanvasLayer.queue_free()
+
 func _physics_process(delta):
 	# 1. Gravedad
 	if not is_on_floor():
